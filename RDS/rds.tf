@@ -19,7 +19,7 @@ resource "aws_db_subnet_group" "db_subnetg" {
   })
 }
 resource "aws_security_group" "rds_sg" {
-  name        = "${var.tags["project"]}-${var.tags["application"]}-${var.tags["environment"]}-rds_dg"
+  name        = "${var.tags["project"]}-${var.tags["application"]}-${var.tags["environment"]}-rds_sg"
   description = "Allow TLS inbound traffic"
   vpc_id      = var.vpc_id
 
